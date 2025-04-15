@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to HabitStackAI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script>
+    function maybeAutoSubmit() {
+      const userType = document.querySelector('input[name="user_type"]:checked')?.value;
+      const username = document.querySelector('input[name="username"]').value.trim();
+      if (userType === 'returning' && username.length > 0) {
+        document.getElementById("habitForm").submit();
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="form-container">  
+  <!-- Error Message Display -->
+  {% if error %}
+    <p style="color: red;"><strong>{{ error }}</strong></p>
+  {% endif %}
+
+  <form action="/dashboard" method="POST" id="habitForm">
+
+    <img src="{{ url_for('static', filename='HabitStackAI.png') }}" alt="HabitStackAI Logo" class="logo">
+    
+    <!-- Username -->
+    <label for="username">Enter your name:</label><br>
+    <input type="text" name="username" required oninput="maybeAutoSubmit()"><br><br>
+
+    <!-- User Type Selection -->
+    <label class="input-label">Are you a new or returning user?</label>
+    <div class="radio-options">
+      <label><input type="radio" name="user_type" value="new" checked> New User</label>
+      <label><input type="radio" name="user_type" value="returning" onchange="maybeAutoSubmit()"> Returning User</label>
+    </div>
+
+    <!-- Habit Selectors (for new users only) -->
+    <div id="habit-selection">
+      <label>Choose up to 3 habits to start with:</label><br><br>
+
+      <!-- Habit 1 -->
+      <select name="habit1">
+        <option value="">-- Select a habit --</option>
+        <option value="Drink More Water">Drink More Water</option>
+        <option value="Eat Healthy">Eat Healthy</option>
+        <option value="Exercise">Exercise</option>
+        <option value="Meditate">Meditate</option>
+        <option value="Read for 20 Minutes">Read for 20 Minutes</option>
+        <option value="Sleep 8 Hours">Sleep 8 Hours</option>
+        <option value="Custom">Custom Habit</option>
+      </select>
+      <input type="text" name="custom1" placeholder="(Optional Custom Habit)"><br><br>
+
+      <!-- Habit 2 -->
+      <select name="habit2">
+        <option value="">-- Select a habit --</option>
+        <option value="Drink More Water">Drink More Water</option>
+        <option value="Eat Healthy">Eat Healthy</option>
+        <option value="Exercise">Exercise</option>
+        <option value="Meditate">Meditate</option>
+        <option value="Read for 20 Minutes">Read for 20 Minutes</option>
+        <option value="Sleep 8 Hours">Sleep 8 Hours</option>
+        <option value="Custom">Custom Habit</option>
+      </select>
+      <input type="text" name="custom2" placeholder="(Optional Custom Habit)"><br><br>
+
+      <!-- Habit 3 -->
+      <select name="habit3">
+        <option value="">-- Select a habit --</option>
+        <option value="Drink More Water">Drink More Water</option>
+        <option value="Eat Healthy">Eat Healthy</option>
+        <option value="Exercise">Exercise</option>
+        <option value="Meditate">Meditate</option>
+        <option value="Read for 20 Minutes">Read for 20 Minutes</option>
+        <option value="Sleep 8 Hours">Sleep 8 Hours</option>
+        <option value="Custom">Custom Habit</option>
+      </select>
+      <input type="text" name="custom3" placeholder="(Optional Custom Habit)"><br><br>
+    </div>
+
+    <button type="submit">Continue to Dashboard</button>
+  </form>
+</div>  
+</body>
+</html>

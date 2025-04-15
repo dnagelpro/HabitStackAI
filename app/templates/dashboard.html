@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ username|capitalize }}'s Habit Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dashboard-container">
+  <img src="{{ url_for('static', filename='HabitStackAI.png') }}" alt="HabitStackAI Logo" class="logo">
+  <h1>
+    {% if user_type != "returning" %}
+        Welcome, {{ username|capitalize }}!
+    {% else %}
+        Welcome back, {{ username|capitalize }}!
+    {% endif %}
+  </h1>
+  
+    <h2>Your Active Habits</h2>
+{% for item in habit_data if item.get("status") != "mastered" %}
+  <div class="habit-card">
+    <h3> 📶 {{ item.habit }}</h3>
+    <p><strong>💬 Motivation:</strong> {{ item.message }}</p>
+    <p><strong>🔥 Current Streak:</strong> {{ item.streak or 0 }} day{{ 's' if (item.streak or 0) != 1 else '' }}</p>
+
+    {% if not item.checked_in_today %}
+      <p class="reminder">🔔 Don’t forget to check in today!</p>
+    {% endif %}
+
+    <div class="button-row">
+      <form method="POST" action="/checkin" class="inline-form">
+        <input type="hidden" name="username" value="{{ username }}">
+        <input type="hidden" name="habit" value="{{ item.habit }}">
+        <button type="submit">Done Today</button>
+      </form>
+
+      <form method="POST" action="/master" class="inline-form">
+        <input type="hidden" name="username" value="{{ username }}">
+        <input type="hidden" name="habit" value="{{ item.habit }}">
+        <button type="submit">Mark as Mastered</button>
+      </form>
+    </div>
+  </div>
+{% endfor %}
+
+    <hr>
+
+    <h2>🎉 Mastered Habits</h2>
+    {% for item in habit_data if item.get("status") == "mastered" %}
+      <div style="margin-bottom: 20px; padding: 10px; border: 1px dashed green;">
+        <h3>🏆 {{ item.habit }}</h3>
+        <p><strong>Final Streak:</strong> {{ item.streak or 0 }} day{{ 's' if (item.streak or 0) != 1 else '' }}</p>
+
+        <!-- Replace Habit Form -->
+        <form method="POST" action="/replace">
+          <input type="hidden" name="username" value="{{ username }}">
+          <input type="hidden" name="old_habit" value="{{ item.habit }}">
+
+          <label>Replace this habit with a new one:</label><br>
+          <select name="new_habit">
+            <option value="">-- Choose a habit --</option>
+            <option value="Drink More Water">Drink More Water</option>
+            <option value="Eat Healthy">Eat Healthy</option>
+            <option value="Exercise">Exercise</option>
+            <option value="Meditate">Meditate</option>
+            <option value="Read for 20 Minutes">Read for 20 Minutes</option>
+            <option value="Sleep 8 Hours">Sleep 8 Hours</option>
+            <option value="Custom">Custom Habit</option>
+          </select>
+          <input type="text" name="custom_habit" placeholder="(Optional Custom Habit)">
+          <br><br>
+          <button type="submit">➕ Add New Habit</button>
+        </form>
+      </div>
+    {% else %}
+      <p>No habits mastered yet — keep stacking! 💪</p>
+    {% endfor %}
+
+    <br>
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

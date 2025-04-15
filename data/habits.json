@@ -1,0 +1,143 @@
+[
+  {
+    "username": "dawn",
+    "habit": "Drink More Water",
+    "message": "Every sip is a fresh step towards vitality and wellness, so fill your glass and let your body rejoice in the crystal clear fuel of life. Keep hydrating, keep thriving!",
+    "check_ins": [
+      "2025-04-11",
+      "2025-04-12",
+      "2025-04-13",
+      "2025-04-14"
+    ],
+    "status": "active",
+    "streak": 1
+  },
+  {
+    "username": "dawn",
+    "habit": "Eat Healthy",
+    "message": "Every bite you take is a step towards a healthier, vibrant life. Remember, nourishing your body with wholesome food is the most fundamental act of self-love and care.",
+    "check_ins": [
+      "2025-04-10",
+      "2025-04-11",
+      "2025-04-12",
+      "2025-04-13",
+      "2025-04-14"
+    ],
+    "status": "active",
+    "streak": 1
+  },
+  {
+    "username": "dawn",
+    "habit": "Exercise",
+    "message": "Remember, each drop of sweat is a step forward towards a healthier, more energized you. Let's embrace each heartbeat as a celebration of your strength, determination, and the better version of yourself that you're crafting one workout at a time.",
+    "check_ins": [
+      "2025-04-10",
+      "2025-04-11",
+      "2025-04-12",
+      "2025-04-13",
+      "2025-04-14"
+    ],
+    "status": "mastered",
+    "streak": 1
+  },
+  {
+    "username": "dawn",
+    "habit": "Meditate",
+    "message": "Embrace the power of silence, let every breath you take in meditation fuel your peace and clarity. Remember, your inner strength is only a mindful moment away.",
+    "check_ins": [
+      "2025-04-14"
+    ],
+    "status": "mastered"
+  },
+  {
+    "username": "kenny",
+    "habit": "Drink More Water",
+    "message": "Remember, every sip of water is a step towards vibrant health and increased energy. Make your well-being ritual invincible by hydrating your body, empowering your life one glass at a time!",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "kenny",
+    "habit": "Sleep 8 Hours",
+    "message": "Embrace the tranquility of a full night's rest. Eight hours of sleep is not just a habit, it's a rejuvenating journey that equips you with the vitality to conquer tomorrow's challenges with unmatched energy and clarity!",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "kenny",
+    "habit": "Exercise",
+    "message": "Each step you take, each weight you lift, is not just building muscle but building a stronger, healthier, and more resilient you. Remember, it's not about perfection, it's about progress and every time you exercise, you're one step closer to your best self.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "dawn",
+    "habit": "Read for 20 Minutes",
+    "message": "Every page you turn not only unlocks a new world of knowledge, but also shapes a better you. Make 'read for 20 minutes' your daily key to wisdom and imagination.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "billy",
+    "habit": "Drink More Water",
+    "message": "Unlock your body's full potential and experience the invigorating energy of hydration. Remember, each glass of water is your personal toast to healthier and happier days ahead.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "billy",
+    "habit": "Exercise",
+    "message": "Every step taken, every rep completed, is you becoming stronger than you were yesterday. Embrace the journey of exercise, it's forging the extraordinary version of you!",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "billy",
+    "habit": "Eat Healthy",
+    "message": "Fuel your body with vibrant, nourishing foods, it's the most powerful tool you have to stay strong, focused, and empowered. Remember, every healthy choice is an investment in your most valuable asset \u2013 yourself.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "juli",
+    "habit": "Eat Healthy",
+    "message": "Every bite you take is a step towards a stronger, healthier you. Remember, you are fueling your body masterpiece, so choose nourishment over indulgence.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "juli",
+    "habit": "Read for 20 Minutes",
+    "message": "Unlock the treasure chest of knowledge and inspiration by dedicating just 20 minutes a day to reading. Remember, every page turned is a step forward on your exciting journey towards personal growth and enlightenment.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "juli",
+    "habit": "Sleep 8 Hours",
+    "message": "Remember, the magic of a full night's sleep fuels your dreams during the day. Prioritize this precious rest, for when you conquer your sleep, you conquer your life.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "matt",
+    "habit": "Drink More Water",
+    "message": "Embrace the power of H2O! Transform your health one sip at a time, as each drop contributes to a more vibrant, energized, and hydrated you.",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "matt",
+    "habit": "Eat Healthy",
+    "message": "Your body is an exceptional masterpiece, fuel it wisely with nutritious food for it is the ultimate investment in your vibrant and energetic life. Remember, every healthy bite is a step closer to a happier, stronger you!",
+    "check_ins": [],
+    "status": "active"
+  },
+  {
+    "username": "matt",
+    "habit": "Exercise",
+    "message": "Remember, every push-up, every squat, every run is one step closer to a healthier, stronger you. Keep pushing, because you are becoming the best version of yourself with each sweat drop!",
+    "check_ins": [],
+    "status": "active"
+  }
+]
